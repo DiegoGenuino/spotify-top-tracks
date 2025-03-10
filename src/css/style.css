@@ -5,6 +5,9 @@
     --spotify-light-gray: #B3B3B3;
     --spotify-white: #FFFFFF;
     --transition-speed: 0.3s;
+    --gradient-1: #1DB954;
+    --gradient-2: #191414;
+    --gradient-3: #535353;
 }
 
 * {
@@ -15,7 +18,11 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background: var(--spotify-black);
+    background: linear-gradient(45deg, var(--gradient-1), var(--gradient-2), var(--gradient-3));
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    position: relative;
+    overflow-x: hidden;
     color: var(--spotify-white);
     line-height: 1.6;
 }
@@ -27,6 +34,10 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
 header {
@@ -152,4 +163,86 @@ footer {
     text-align: center;
     padding: 2rem 0;
     color: var(--spotify-light-gray);
+}
+
+.background-decoration {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.circle {
+    position: absolute;
+    background: rgba(29, 185, 84, 0.1);
+    border-radius: 50%;
+    filter: blur(8px);
+}
+
+.circle-1 {
+    width: 300px;
+    height: 300px;
+    top: -150px;
+    left: -150px;
+    animation: float 8s ease-in-out infinite;
+}
+
+.circle-2 {
+    width: 500px;
+    height: 500px;
+    bottom: -250px;
+    right: -250px;
+    animation: float 12s ease-in-out infinite;
+    animation-delay: -3s;
+}
+
+.circle-3 {
+    width: 200px;
+    height: 200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: pulse 8s ease-in-out infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(40px) rotate(180deg);
+    }
+    100% {
+        transform: translateY(0) rotate(360deg);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.3;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.2);
+        opacity: 0.1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.3;
+    }
 }
