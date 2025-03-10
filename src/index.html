@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Top Tracks</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Suas Top 5 Músicas</h1>
+            <p class="subtitle">Descubra suas músicas mais ouvidas no Spotify</p>
+        </header>
+
+        <main>
+            <div id="login-section" class="login-section">
+                <button id="login-button" class="spotify-button">
+                    <span class="ripple-container"></span>
+                    Conectar com Spotify
+                </button>
+                <button id="logout-button" class="spotify-button" style="display: none;">
+                    <span class="ripple-container"></span>
+                    Desconectar
+                </button>
+            </div>
+
+            <div id="tracks-container" class="tracks-container"></div>
+        </main>
+
+        <footer>
+            <p>Desenvolvido com ❤️ usando a API do Spotify</p>
+        </footer>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

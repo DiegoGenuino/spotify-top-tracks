@@ -1,0 +1,49 @@
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .track-item {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem;
+    }
+
+    .position {
+        margin-bottom: 0.5rem;
+    }
+
+    .album-cover {
+        width: 128px;
+        height: 128px;
+    }
+
+    .track-info {
+        text-align: center;
+    }
+
+    audio {
+        width: 100%;
+        max-width: none;
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .spotify-button {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+}
