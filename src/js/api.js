@@ -1,5 +1,5 @@
 const CLIENT_ID = '1c7d1de52668416fa79d21a4ecd4fa27';
-const REDIRECT_URI = 'http://localhost:5500/src/';
+const REDIRECT_URI = 'https://spotify-top-tracks-lemon.vercel.app/';
 
 class SpotifyAPI {
     constructor() {
